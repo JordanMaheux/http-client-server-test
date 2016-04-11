@@ -25,9 +25,20 @@ class Message implements MessageInterface
      *
      * @return string HTTP protocol version.
      */
+	private $protocol_version;
+	private $headers;
+	private $body;
+	 
+	public function __construct($protocol_version, $headers, $body)
+	{
+		$this->protocol_version   = $protocol_version;
+		$this->headers            = $headers;
+		$this->body               = $body;
+	}
+	
     public function getProtocolVersion()
     {
-
+		return $this->protocol_version;
     }
 
     /**
@@ -75,7 +86,7 @@ class Message implements MessageInterface
      */
     public function getHeaders()
     {
-
+		return $this->header;
     }
 
     /**
@@ -190,7 +201,7 @@ class Message implements MessageInterface
      */
     public function withoutHeader($name)
     {
-
+	
     }
 
     /**
@@ -200,7 +211,7 @@ class Message implements MessageInterface
      */
     public function getBody()
     {
-
+		return $this->body;
     }
 
     /**
