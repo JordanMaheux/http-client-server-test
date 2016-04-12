@@ -1,8 +1,8 @@
 <?php
+
 namespace pillr\library\http;
 
 use \Psr\Http\Message\ServerRequestInterface as ServerRequestInterface;
-
 use \pillr\library\http\Request              as Request;
 /**
  * Representation of an incoming, server-side HTTP request.

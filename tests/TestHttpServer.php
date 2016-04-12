@@ -1,6 +1,6 @@
 <?php
 
-require __DIR . '/../vendor/autoload.php';
+require __DIR__ . '/../vendor/autoload.php';
 
 use \pillr\library\http\Request  as HttpRequest;
 use \pillr\library\http\Response as HttpResponse;
@@ -11,11 +11,11 @@ class TestHttpServer extends \PHPUnit_Framework_TestCase {
     public function testRequest()
     {
         // *
- // * - Protocol version
- // * - HTTP method
- // * - URI
- // * - Headers
- // * - Message body
+        // * - Protocol version
+        // * - HTTP method
+        // * - URI
+        // * - Headers
+        // * - Message body
 
         $uri_string = 'https://pillrcompany.com/interns/test?psr=true';
 
@@ -59,11 +59,10 @@ class TestHttpServer extends \PHPUnit_Framework_TestCase {
 
     public function testResponse()
     {
-
- // - Protocol version
- // * - Status code and reason phrase
- // * - Headers
- // * - Message body
+        // - Protocol version
+        // * - Status code and reason phrase
+        // * - Headers
+        // * - Message body
 
         $httpResponse =  new HttpResponse(
             '1.1',

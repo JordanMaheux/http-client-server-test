@@ -1,10 +1,9 @@
 <?php
+
 namespace pillr\library\http;
 
 use \Psr\Http\Message\ResponseInterface as ResponseInterface;
-
 use \pillr\library\http\Message         as  Message;
-
 use InvalidArgumentException;
 
 /**
@@ -148,7 +147,7 @@ class Response extends Message implements ResponseInterface
      *     provided status code; if none is provided, implementations MAY
      *     use the defaults as suggested in the HTTP specification.
      * @return self
-     * @throws \InvalidArgumentException For invalid status code arguments.
+     * @throws InvalidArgumentException for invalid status code arguments.
      */
     public function withStatus($code, $reasonPhrase = '')
     {

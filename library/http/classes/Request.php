@@ -2,10 +2,8 @@
 
 namespace pillr\library\http;
 
-
 use \Psr\Http\Message\RequestInterface  as  RequestInterface;
 use \Psr\Http\Message\UriInterface      as  UriInterface;
-
 use \pillr\library\http\Message         as  Message;
 /**
  * Representation of an outgoing, client-side request.
@@ -83,7 +81,7 @@ class Request extends Message implements RequestInterface
 			
 		return new self($this->getProtocolVersion(),
 						$this->method,
-						new Uri($requestTartget),
+						new Uri($requestTarget),
 						$this->getHeaders(),
 						$this->getBody());
     }
@@ -166,6 +164,4 @@ class Request extends Message implements RequestInterface
     {
 
     }
-
-
 }
