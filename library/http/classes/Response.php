@@ -32,8 +32,8 @@ class Response extends Message implements ResponseInterface
      * @return int Status code.
      */
 	 
-	 private $status_code
-	 private $reason_phrase
+	 private $status_code;
+	 private $reason_phrase;
 	 private static $default_phrases = array(
 		// 1xx Informational
 		100 => 'Continue',
@@ -114,7 +114,7 @@ class Response extends Message implements ResponseInterface
 		if (!empty($reason_phrase) || !isset(self::$default_phrases[$status_code]))
 			$this->reason_phrase = $reason_phrase;
 		else
-			$this->reason-phrase = self::$default_phrases[$status_code];
+			$this->reason_phrase = self::$default_phrases[$status_code];
 	 }
 	 
 	 private function statusCodeInvalid($code)
@@ -147,7 +147,7 @@ class Response extends Message implements ResponseInterface
      *     provided status code; if none is provided, implementations MAY
      *     use the defaults as suggested in the HTTP specification.
      * @return self
-     * @throws InvalidArgumentException for invalid status code arguments.
+     * @throws \InvalidArgumentException for invalid status code arguments.
      */
     public function withStatus($code, $reasonPhrase = '')
     {

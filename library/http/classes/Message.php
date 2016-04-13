@@ -86,7 +86,7 @@ class Message implements MessageInterface
      */
     public function getHeaders()
     {
-		return $this->header;
+		return $this->headers;
     }
 
     /**

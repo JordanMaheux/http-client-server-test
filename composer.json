@@ -2,10 +2,16 @@
     "require": {
         "monolog/monolog": "^1.17"
     },
+    "require-dev": {
+    	"phpunit/phpunit": "5.3.*"
+    },
     "autoload": {
         "classmap": [
             "library/http/interfaces",
             "library/http/classes/"
         ]
+    },
+    "scripts": {
+    	"test": "vendor/bin/phpunit ./tests/TestHttpServer.php"
     }
 }

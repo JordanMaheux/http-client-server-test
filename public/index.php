@@ -19,3 +19,4 @@ $res_body = array(
 header('Last-Modified: ' . date('D, d, M, Y, H:i:s T', getlastmod()));
 header('Content-Type: application/json');
 echo json_encode($res_body);
+header('Content-Length: ' .  ob_get_length());

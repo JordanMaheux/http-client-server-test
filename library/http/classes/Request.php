@@ -54,7 +54,11 @@ class Request extends Message implements RequestInterface
      */
     public function getRequestTarget()
     {
-
+	// Returning the origin-form of the request target uri
+	if (!is_null($this->uri))
+	   return $this->uri->__toString();
+	else
+           return "/";
     }
 
     /**
