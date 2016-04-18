@@ -8,7 +8,9 @@ require __DIR__ . '/../vendor/autoload.php';
 #      Ex. header('Content-Type', 'text/html');
 
 $protocol_version = $_SERVER['SERVER_PROTOCOL'];
+$id = $_SERVER['REQUEST_URI'];
 $res_body = array(
+	'@id'		=> $id,
 	'to' 		=> 'Pillr',
 	'subject' 	=> 'Pillr Test Submission',
 	'message' 	=> 'Hello, here is my test submission. I hope you like it.',
