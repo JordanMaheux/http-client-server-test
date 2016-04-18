@@ -1,2 +1,4 @@
 /vendor/
 *.php~
+*.gitignore~
+composer.phar
